@@ -13,7 +13,7 @@ class APIClient {
     static let shared = APIClient()
     
     //MARK:- Methods
-    func getHomePageMovies() {
+    func getHomePageMovies(completion: @escaping (Result<MoviesObject, Error>) -> Void ) {
         let urlString = (Constants.API.baseUrl + Constants.API.HomePageMoviesURL.replacingOccurrences(of: "{apiKey}", with: Constants.API.apiKey)).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         print("### URL: ", urlString ?? "")
         if let urlString = urlString, let url = URL(string: urlString) {
@@ -25,14 +25,25 @@ class APIClient {
                     print(String(describing: error))
                     return
                 }
-                print(String(data: data, encoding: .utf8)!)
+                
+                let decoder = JSONDecoder()
+                
+                do {
+                    let decodedData = try decoder.decode(MoviesObject.self, from: data)
+                    completion(.success(decodedData))
+                } catch let error {
+                    print(error)
+                    completion(.failure(error))
+                }
+
+                print(String(data: data, encoding: .utf8) ?? "")
             }
             
             task.resume()
         }
     }
     
-    func searchMovie(name: String) {
+    func searchMovie(name: String, completion: @escaping (Result<MoviesObject, Error>) -> Void) {
         let urlString = (Constants.API.baseUrl + Constants.API.searchQuereyURL.replacingOccurrences(of: "{apiKey}", with: Constants.API.apiKey).replacingOccurrences(of: "{MovieName}", with: name)).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         print("### URL: ", urlString ?? "")
         guard let urlStringValue = urlString,
@@ -48,8 +59,18 @@ class APIClient {
                 print(String(describing: error))
                 return
             }
-            print(String(data: data, encoding: .utf8)!)
+            let decoder = JSONDecoder()
+            
+            do {
+                let decodedData = try decoder.decode(MoviesObject.self, from: data)
+                completion(.success(decodedData))
+            } catch let error {
+                print(error)
+                completion(.failure(error))
+            }
+            print(String(data: data, encoding: .utf8) ?? "")
         }
         task.resume()
     }
 }
+
