@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="homeTableViewCellIdentifier" selectionStyle="default" indentationWidth="10" rowHeight="135" id="KGk-i7-Jjw" customClass="HomePageMovieTableViewCell" customModule="MovieFlix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lmC-c1-LFf">
+                        <rect key="frame" x="16" y="16" width="80" height="103"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="HMu-TJ-aA9"/>
+                            <constraint firstAttribute="height" constant="103" id="t84-sO-Dpe"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdz-w1-l4L">
+                        <rect key="frame" x="106" y="16" width="198" height="103"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQ2-0a-EaA">
+                                <rect key="frame" x="0.0" y="5" width="198" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rce-OR-u8A">
+                                <rect key="frame" x="0.0" y="82.5" width="163" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVW-lz-LN1">
+                                <rect key="frame" x="168" y="73" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nkY-J0-QhN"/>
+                                    <constraint firstAttribute="width" constant="30" id="pTy-cU-v1Y"/>
+                                </constraints>
+                                <state key="normal" image="info.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="didClickMovieDetails:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="V9F-XF-xIO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BVW-lz-LN1" firstAttribute="leading" secondItem="Rce-OR-u8A" secondAttribute="trailing" constant="5" id="8hT-ia-iFp"/>
+                            <constraint firstAttribute="trailing" secondItem="BVW-lz-LN1" secondAttribute="trailing" id="OEJ-c1-svs"/>
+                            <constraint firstAttribute="bottom" secondItem="BVW-lz-LN1" secondAttribute="bottom" id="QlB-eo-fOA"/>
+                            <constraint firstItem="pQ2-0a-EaA" firstAttribute="top" secondItem="Pdz-w1-l4L" secondAttribute="top" constant="5" id="RdW-HL-4iL"/>
+                            <constraint firstItem="Rce-OR-u8A" firstAttribute="leading" secondItem="Pdz-w1-l4L" secondAttribute="leading" id="TBx-N8-6IW"/>
+                            <constraint firstAttribute="trailing" secondItem="pQ2-0a-EaA" secondAttribute="trailing" id="Xt0-r4-NS6"/>
+                            <constraint firstAttribute="bottom" secondItem="Rce-OR-u8A" secondAttribute="bottom" id="cjv-a2-RjB"/>
+                            <constraint firstItem="pQ2-0a-EaA" firstAttribute="leading" secondItem="Pdz-w1-l4L" secondAttribute="leading" id="n3G-DB-WQL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Pdz-w1-l4L" firstAttribute="leading" secondItem="lmC-c1-LFf" secondAttribute="trailing" constant="10" id="4Dp-9b-K4k"/>
+                    <constraint firstItem="lmC-c1-LFf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BsK-wg-f0T"/>
+                    <constraint firstItem="Pdz-w1-l4L" firstAttribute="bottom" secondItem="lmC-c1-LFf" secondAttribute="bottom" id="GZw-Tf-NSf"/>
+                    <constraint firstItem="Pdz-w1-l4L" firstAttribute="top" secondItem="lmC-c1-LFf" secondAttribute="top" id="QVY-Hk-I70"/>
+                    <constraint firstAttribute="trailing" secondItem="Pdz-w1-l4L" secondAttribute="trailing" constant="16" id="jd5-mt-5FL"/>
+                    <constraint firstItem="lmC-c1-LFf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="s1f-go-nMB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieImageView" destination="lmC-c1-LFf" id="DW2-tf-ryW"/>
+                <outlet property="movieNameLabel" destination="pQ2-0a-EaA" id="pwB-UY-qIS"/>
+                <outlet property="releaseDateLabel" destination="Rce-OR-u8A" id="047-SC-6oJ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="150.33482142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

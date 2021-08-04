@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
     // MARK: -API
@@ -18,5 +19,10 @@ struct Constants {
         static let imagesBaseUrl = "https://www.themoviedb.org/t/p/w1280"
     }
     
+    //MARK:- Colors
+    struct Colors {
+        static let backgroundColor = UIColor(named: "backgroundColor") ?? UIColor.white
+        static let textColor =  UIColor(named: "textColor") ?? UIColor.gray
+    }
 }
 
