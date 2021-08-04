@@ -58,7 +58,11 @@ extension HomeTableViewController: UITableViewDelegate, UITableViewDataSource {
         
         let action:  (() -> Void) = {
             // Present detail View
-            
+            if let movies = self.movies {
+                let movie = movies[indexPath.row]
+                let vc = MovieDetailsViewController(movie: movie)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
         guard  let movies = movies, cell != nil else {return UITableViewCell()}
         let movie = movies[indexPath.row]

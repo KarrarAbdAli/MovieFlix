@@ -15,6 +15,8 @@
 		C70AEB9C26BA14A000E59A2B /* HomePageMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70AEB9A26BA14A000E59A2B /* HomePageMovieTableViewCell.xib */; };
 		C70AEB9E26BA20A900E59A2B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AEB9D26BA20A900E59A2B /* DateHelper.swift */; };
 		C70AEBA126BA2A6800E59A2B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AEBA026BA2A6800E59A2B /* WebViewController.swift */; };
+		C70AEBA426BA30B600E59A2B /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AEBA226BA30B600E59A2B /* MovieDetailsViewController.swift */; };
+		C70AEBA526BA30B600E59A2B /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70AEBA326BA30B600E59A2B /* MovieDetailsViewController.xib */; };
 		C7F82AD226B9BDAA00CAD3A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F82AD126B9BDAA00CAD3A6 /* AppDelegate.swift */; };
 		C7F82AD426B9BDAA00CAD3A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F82AD326B9BDAA00CAD3A6 /* SceneDelegate.swift */; };
 		C7F82AD626B9BDAA00CAD3A6 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F82AD526B9BDAA00CAD3A6 /* HomeTableViewController.swift */; };
@@ -53,6 +55,8 @@
 		C70AEB9A26BA14A000E59A2B /* HomePageMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageMovieTableViewCell.xib; sourceTree = "<group>"; };
 		C70AEB9D26BA20A900E59A2B /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		C70AEBA026BA2A6800E59A2B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C70AEBA226BA30B600E59A2B /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		C70AEBA326BA30B600E59A2B /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
 		C7F82ACE26B9BDAA00CAD3A6 /* MovieFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F82AD126B9BDAA00CAD3A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7F82AD326B9BDAA00CAD3A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			children = (
 				C70AEB9926BA14A000E59A2B /* HomePageMovieTableViewCell.swift */,
 				C70AEB9A26BA14A000E59A2B /* HomePageMovieTableViewCell.xib */,
+				C70AEBA326BA30B600E59A2B /* MovieDetailsViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			children = (
 				C7F82AD526B9BDAA00CAD3A6 /* HomeTableViewController.swift */,
 				C70AEBA026BA2A6800E59A2B /* WebViewController.swift */,
+				C70AEBA226BA30B600E59A2B /* MovieDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70AEBA526BA30B600E59A2B /* MovieDetailsViewController.xib in Resources */,
 				C7F82ADE26B9BDAD00CAD3A6 /* LaunchScreen.storyboard in Resources */,
 				C70AEB9C26BA14A000E59A2B /* HomePageMovieTableViewCell.xib in Resources */,
 				C7F82ADB26B9BDAD00CAD3A6 /* Assets.xcassets in Resources */,
@@ -340,6 +347,7 @@
 				C70AEB9B26BA14A000E59A2B /* HomePageMovieTableViewCell.swift in Sources */,
 				C7F82AD426B9BDAA00CAD3A6 /* SceneDelegate.swift in Sources */,
 				C70AEBA126BA2A6800E59A2B /* WebViewController.swift in Sources */,
+				C70AEBA426BA30B600E59A2B /* MovieDetailsViewController.swift in Sources */,
 				C7F82B0326B9BEA900CAD3A6 /* APIClient.swift in Sources */,
 				C70AEB9126BA09D100E59A2B /* ImageViewHelper.swift in Sources */,
 				C70AEB9E26BA20A900E59A2B /* DateHelper.swift in Sources */,
