@@ -78,6 +78,12 @@ extension HomeTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard let movies = movies else { return }
+        let movie = movies[indexPath.row]
+        if let id = movie.id {
+            let controller = WebViewController(movieId: id)
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
 }
