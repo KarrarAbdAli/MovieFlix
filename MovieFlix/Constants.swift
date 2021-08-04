@@ -15,7 +15,7 @@ struct Constants {
         static let baseUrl = "https://api.themoviedb.org/3/"
         static let HomePageMoviesURL = "movie/top_rated?api_key={apiKey}&language=en-US&page=1" 
         static let searchQuereyURL = "search/movie?api_key={apiKey}&language=en-US&query={MovieName}&page=1"//&include_adult=false
-        
+        static let imagesBaseUrl = "https://www.themoviedb.org/t/p/w1280"
     }
     
 }

@@ -11,7 +11,7 @@ import Foundation
 class APIClient {
     //MARK:- Var
     static let shared = APIClient()
-    
+
     //MARK:- Methods
     func getHomePageMovies(completion: @escaping (Result<MoviesObject, Error>) -> Void ) {
         let urlString = (Constants.API.baseUrl + Constants.API.HomePageMoviesURL.replacingOccurrences(of: "{apiKey}", with: Constants.API.apiKey)).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -72,5 +72,6 @@ class APIClient {
         }
         task.resume()
     }
+    
 }
 
