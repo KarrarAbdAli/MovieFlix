@@ -16,21 +16,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U2R-qk-oXC">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" id="tv0-yT-HbC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="U2R-qk-oXC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8P2-LH-ZT2"/>
-                            <constraint firstItem="U2R-qk-oXC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NMR-bp-Vls"/>
                             <constraint firstAttribute="bottom" secondItem="U2R-qk-oXC" secondAttribute="bottom" id="Rlk-ql-Yhj"/>
                             <constraint firstItem="U2R-qk-oXC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pS8-Jk-pTN"/>
+                            <constraint firstItem="U2R-qk-oXC" firstAttribute="top" secondItem="tv0-yT-HbC" secondAttribute="bottom" id="uO1-KR-Flv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="WJF-IW-6TI"/>
                     <connections>
+                        <outlet property="searchBar" destination="tv0-yT-HbC" id="7JI-sY-x8J"/>
                         <outlet property="tableView" destination="U2R-qk-oXC" id="dbF-tt-oxm"/>
                     </connections>
                 </viewController>
